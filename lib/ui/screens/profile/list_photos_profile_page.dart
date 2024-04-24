@@ -46,7 +46,7 @@ class _ListPhotosProfilePageState extends State<ListPhotosProfilePage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: const TextCustom(text: 'Publicaciones', fontWeight: FontWeight.w500),
+          title: const TextCustom(text: 'Publications', fontWeight: FontWeight.w500),
           elevation: 0,
           leading: IconButton(
             onPressed: () => Navigator.pop(context),

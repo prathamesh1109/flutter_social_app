@@ -26,13 +26,13 @@ class VerifyEmailPage extends StatelessWidget {
         
         if( state is LoadingUserState ){
 
-          modalLoading(context, 'Verificando codigo...');
+          modalLoading(context, 'Checking code...');
 
         } else if( state is SuccessUserState ){
 
           Navigator.pop(context);
           modalSuccess(
-            context, 'Bienvenido!', 
+            context, 'Welcome!',
             onPressed: () => Navigator.pushAndRemoveUntil(context, routeSlide(page: const StartedPage()), (_) => false)
           );
           
@@ -73,10 +73,10 @@ class VerifyEmailPage extends StatelessWidget {
                   ),
     
                   const SizedBox(height: 20.0),
-                  const TextCustom(text: 'Verifica tu correo electronico', fontSize: 20, fontWeight: FontWeight.w500 ),
+                  const TextCustom(text: 'Verify your email', fontSize: 20, fontWeight: FontWeight.w500 ),
                   const SizedBox(height: 20.0),
                   TextCustom(
-                    text: 'Por favor ingresa el codigo de 5 digitos enviado a tu correo electronico. $email',
+                    text: 'Please enter the 5-digit code sent to your email. $email',
                     maxLines: 3,
                     fontSize: 16,
                     color: Colors.grey,

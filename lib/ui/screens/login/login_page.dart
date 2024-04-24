@@ -92,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     const SizedBox(height: 10.0),
                     const TextCustom(
-                       text: 'Bienvenido de nuevo!', 
+                       text: 'Welcome back!',
                        letterSpacing: 1.5, 
                        fontWeight: FontWeight.w600, 
                        fontSize: 30, 
@@ -101,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
               
                     const SizedBox(height: 10.0),
                     const TextCustom(
-                       text: 'Inicia sesión para continuar.', 
+                       text: 'Sign in to continue.',
                        fontSize: 18,
                        letterSpacing: 1.0,
                     ),
@@ -109,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(height: 70.0),
                     TextFieldFrave(
                       controller: emailController,
-                      hintText: 'Correo electronico',
+                      hintText: 'Email',
                       keyboardType: TextInputType.emailAddress,
                       validator: validatedEmail,
                     ),
@@ -117,14 +117,14 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(height: 50.0),
                     TextFieldFrave(
                       controller: passwordController,
-                      hintText: 'Contraseña',
+                      hintText: 'Password',
                       isPassword: true,
                       validator: passwordValidator,
                     ),
               
                     const SizedBox(height: 80.0),
                     BtnFrave(
-                      text: 'Iniciar Sesión', 
+                      text: 'Log in',
                       width: size.width,
                       onPressed: (){
     
@@ -140,7 +140,7 @@ class _LoginPageState extends State<LoginPage> {
                     Center(
                       child: InkWell(
                         onTap: () => Navigator.push(context, routeSlide(page: const ForgotPasswordPage())),
-                        child: const TextCustom(text: 'Olvide mi contraseña?')
+                        child: const TextCustom(text: 'I forgot my password?')
                       )
                     )
               

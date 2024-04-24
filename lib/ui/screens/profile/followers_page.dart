@@ -25,7 +25,7 @@ class _FollowersPageState extends State<FollowersPage> {
     return BlocListener<UserBloc, UserState>(
       listener: (context, state) {
         if(state is LoadingFollowersUser){
-          modalLoading(context, 'Cargando...');
+          modalLoading(context, 'Charging...');
         }else if( state is FailureUserState ){
           Navigator.pop(context);
           errorMessageSnack(context, state.error);
@@ -38,7 +38,7 @@ class _FollowersPageState extends State<FollowersPage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
             backgroundColor: Colors.white,
-            title: const TextCustom(text: 'Seguidores', letterSpacing: .8, fontSize: 19),
+            title: const TextCustom(text: 'Followers', letterSpacing: .8, fontSize: 19),
             elevation: 0,
             leading: IconButton(
               splashRadius: 20,
@@ -127,7 +127,7 @@ class _ListFollowers extends StatelessWidget {
                     onTap: () => userBloc.add(OnDeletefollowersEvent(follow[i].uidUser)),
                     child: const Padding(
                       padding:  EdgeInsets.symmetric(horizontal: 17.0, vertical: 6.0),
-                      child: TextCustom(text: 'Eliminar', fontSize: 16),
+                      child: TextCustom(text: 'Eliminate', fontSize: 16),
                     )
                   ),
                 ),

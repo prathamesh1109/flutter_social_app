@@ -36,7 +36,7 @@ modalProfileSetting(BuildContext context, Size size) {
             const SizedBox(height: 10.0),
             Item(
               icon: Icons.settings,
-              text: 'Configuración',
+              text: 'Setting',
               size: size,
               onPressed: (){
                 Navigator.pop(context);
@@ -45,7 +45,7 @@ modalProfileSetting(BuildContext context, Size size) {
             ),
             Item(
               icon: Icons.history,
-              text: 'Tu Actividad',
+              text: 'Your Activity',
               size: size,
               onPressed: (){},
             ),
@@ -57,13 +57,13 @@ modalProfileSetting(BuildContext context, Size size) {
             ),
             Item(
               icon: Icons.bookmark_border_rounded,
-              text: 'Guardado',
+              text: 'Saved',
               size: size,
               onPressed: (){},
             ),
             Item(
               icon: Icons.health_and_safety_sharp,
-              text: 'COVID 19 información',
+              text: 'COVID 19 information',
               size: size,
               onPressed: (){},
             ),

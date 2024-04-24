@@ -39,11 +39,11 @@ modalPrivacyPost(BuildContext context) {
             ),
             const SizedBox(height: 15.0),
             const Center(
-              child: TextCustom(text: 'Quienes pueden comentar?', fontWeight: FontWeight.w500 )
+              child: TextCustom(text: 'Who can comment?', fontWeight: FontWeight.w500 )
             ),
             
             const SizedBox(height: 15.0),
-            const TextCustom(text: 'Selecciona quienes pueden comentar tu\npublicación.', fontSize: 16, color: Colors.grey, maxLines: 2),
+            const TextCustom(text: 'Select who can comment on your\npost.', fontSize: 16, color: Colors.grey, maxLines: 2),
 
             const SizedBox(height: 20.0),
             InkWell(
@@ -63,7 +63,7 @@ modalPrivacyPost(BuildContext context) {
                     ],
                   ),
                   const SizedBox(width: 10.0),
-                  const TextCustom(text: 'Todos', fontSize: 17,)
+                  const TextCustom(text: 'All', fontSize: 17,)
                 ],
               ),
             ),
@@ -85,7 +85,7 @@ modalPrivacyPost(BuildContext context) {
                     ],
                   ),
                   const SizedBox(width: 10.0),
-                  const TextCustom(text: 'Solor seguidores', fontSize: 17,)
+                  const TextCustom(text: 'Solor followers', fontSize: 17,)
                 ],
               ),
             ),
@@ -107,7 +107,7 @@ modalPrivacyPost(BuildContext context) {
                     ],
                   ),
                   const SizedBox(width: 10.0),
-                  const TextCustom(text: 'Nadie', fontSize: 17,)
+                  const TextCustom(text: 'Nobody', fontSize: 17,)
                 ],
               ),
             ),

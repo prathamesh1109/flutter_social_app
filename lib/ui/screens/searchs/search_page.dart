@@ -74,7 +74,7 @@ class _SearchPageState extends State<SearchPage> {
                     },
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: 'Buscar un amigo',
+                      hintText: 'Find a friend',
                       hintStyle: GoogleFonts.roboto(fontSize: 17),
                       suffixIcon: const Icon(Icons.search_rounded)
                     ),
@@ -117,7 +117,7 @@ class _SearchPageState extends State<SearchPage> {
 
         if( snapshot.data!.isEmpty ) {
           return ListTile(
-            title: TextCustom(text: 'Sin resultados para ${_searchController.text}'),
+            title: TextCustom(text: 'No results for ${_searchController.text}'),
           );
         }
 

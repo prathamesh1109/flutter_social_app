@@ -25,7 +25,7 @@ class ReelHomeScreen extends StatelessWidget {
           const Positioned(
             left: 15,
             top: 30,
-            child: TextCustom(text: 'Fraved', color: Colors.white, isTitle: true, fontWeight: FontWeight.w600)
+            child: TextCustom(text: 'BlueCortex', color: Colors.white, isTitle: true, fontWeight: FontWeight.w600)
           ),
 
           Positioned(
@@ -49,7 +49,7 @@ class ReelHomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(5.0),
                         border: Border.all(color: Colors.white)
                       ),
-                      child: const TextCustom(text: 'Seguir', color: Colors.white, fontSize: 13, fontWeight: FontWeight.w500,),
+                      child: const TextCustom(text: 'follow', color: Colors.white, fontSize: 13, fontWeight: FontWeight.w500,),
                     )
                   ],
                 ),
@@ -60,7 +60,7 @@ class ReelHomeScreen extends StatelessWidget {
                   children: const [
                     Icon(Icons.music_note_rounded, color: Colors.white, size: 15,),
                     SizedBox(width: 5.0),
-                    TextCustom(text: 'Nombre de la musica', color: Colors.white, fontSize: 14.0,)
+                    TextCustom(text: 'Name of the music', color: Colors.white, fontSize: 14.0,)
                   ],
                 )
               ],

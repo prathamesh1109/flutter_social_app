@@ -16,7 +16,7 @@ void modalWarning(BuildContext context, String text){
               children: [
                 Row(
                   children: const[
-                    TextCustom(text: 'Frave ', color: Colors.amber, fontWeight: FontWeight.w500 ),
+                    TextCustom(text: 'BlueCortex ', color: Colors.amber, fontWeight: FontWeight.w500 ),
                     TextCustom(text: 'Social', fontWeight: FontWeight.w500),
                   ],
                 ),

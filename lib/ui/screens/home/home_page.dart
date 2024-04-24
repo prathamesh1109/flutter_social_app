@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: const TextCustom(text: 'Frave social', fontWeight: FontWeight.w600, fontSize: 22, color: ColorsFrave.secundary, isTitle: true,),
+          title: const TextCustom(text: 'BlueCortex social', fontWeight: FontWeight.w600, fontSize: 22, color: ColorsFrave.secundary, isTitle: true,),
           elevation: 0,
           actions: [
             IconButton(

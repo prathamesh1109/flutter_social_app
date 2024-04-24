@@ -28,7 +28,7 @@ class StartedPage extends StatelessWidget {
               child: Row(
                 children: [
                   Image.asset('assets/img/logo-black.png', height: 30),
-                  const TextCustom(text: 'Frave', fontWeight: FontWeight.w500, color: ColorsFrave.primary),
+                  const TextCustom(text: 'BlueCortex', fontWeight: FontWeight.w500, color: ColorsFrave.primary),
                   const TextCustom(text: ' Social', fontSize: 17)
                 ],
               ),
@@ -43,7 +43,7 @@ class StartedPage extends StatelessWidget {
             ),
 
             const TextCustom(
-              text: 'Bienvenido !', 
+              text: 'Welcome !',
               letterSpacing: 2.0, 
               color: ColorsFrave.secundary,
               fontWeight: FontWeight.w600,
@@ -54,7 +54,7 @@ class StartedPage extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: TextCustom(
-                text: 'El mejor lugar para escribir historias y compartir tus experiencias.',
+                text: 'The best place to write stories and share your experiences.',
                 textAlign: TextAlign.center,
                 maxLines: 2,
                 fontSize: 17,
@@ -72,7 +72,7 @@ class StartedPage extends StatelessWidget {
                     backgroundColor: ColorsFrave.secundary,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))
                   ),
-                  child: const TextCustom(text: 'Iniciar sesión', color: Colors.white, fontSize: 20),
+                  child: const TextCustom(text: 'Log in', color: Colors.white, fontSize: 20),
                   onPressed: () => Navigator.push(context, routeSlide(page: const LoginPage())), 
                 ),
               ),
@@ -89,7 +89,7 @@ class StartedPage extends StatelessWidget {
                   border: Border.all(color: ColorsFrave.secundary, width: 1.5)
                 ),
                 child: TextButton(
-                  child: const TextCustom(text: 'Registrate', color: ColorsFrave.secundary, fontSize: 20),
+                  child: const TextCustom(text: 'Register', color: ColorsFrave.secundary, fontSize: 20),
                   onPressed: () => Navigator.push(context, routeSlide(page: const RegisterPage())), 
                 ),
               ),

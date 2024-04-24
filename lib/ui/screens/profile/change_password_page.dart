@@ -59,7 +59,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
 
         if( state is LoadingUserState ){
 
-          modalLoading(context, 'Actualizando contraseña...');
+          modalLoading(context, 'Updating password...');
 
         }else if( state is FailureUserState ){
 
@@ -69,7 +69,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
         }else if( state is SuccessUserState ){
 
           Navigator.pop(context);
-          modalSuccess(context, 'Contraseña cambiada!', onPressed: (){
+          modalSuccess(context, 'Password changed!', onPressed: (){
             clear();
             Navigator.pop(context);
           });
@@ -81,7 +81,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: const TextCustom(text: 'Contraseña', fontSize: 19),
+          title: const TextCustom(text: 'Password', fontSize: 19),
           elevation: 0,
           leading: IconButton(
             onPressed: () => Navigator.pop(context),
@@ -99,7 +99,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
     
                 }
               }, 
-              child: const TextCustom(text: 'Guardar', fontSize: 15, color: ColorsFrave.primary)
+              child: const TextCustom(text: 'Password', fontSize: 15, color: ColorsFrave.primary)
             )
           ],
         ),
@@ -114,30 +114,30 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
         
                     TextFormProfile(
                       controller: _currentPasswordController, 
-                      labelText: 'Contraseña actual',
+                      labelText: 'Current password',
                       validator: MultiValidator([
-                        MinLengthValidator(8, errorText: 'Minimo 8 caracteres'),
-                        RequiredValidator(errorText: 'El campo no puede estar vacio')
+                        MinLengthValidator(8, errorText: 'Current password'),
+                        RequiredValidator(errorText: 'The field cannot be empty')
                       ]),
                     ),
         
                     const SizedBox(height: 20.0),
                     TextFormProfile(
                       controller: _newPasswordController, 
-                      labelText: 'Nueva Contraseña',
+                      labelText: 'New Password',
                       validator: MultiValidator([
-                        MinLengthValidator(8, errorText: 'Minimo 8 caracteres'),
-                        RequiredValidator(errorText: 'El campo no puede estar vacio')
+                        MinLengthValidator(8, errorText: 'Minimum 8 characters'),
+                        RequiredValidator(errorText: 'The field cannot be empty')
                       ]),
                     ),
         
                     const SizedBox(height: 20.0),
                     TextFormProfile(
                       controller: _newPasswordAgainController, 
-                      labelText: 'Repetir contraseña',
+                      labelText: 'Repeat password',
                       validator: MultiValidator([
-                        MinLengthValidator(8, errorText: 'Minimo 8 caracteres'),
-                        RequiredValidator(errorText: 'El campo no puede estar vacio')
+                        MinLengthValidator(8, errorText: 'Minimum 8 characters'),
+                        RequiredValidator(errorText: 'The field cannot be empty')
                       ]),
                     ),
         

@@ -17,7 +17,7 @@ void modalSuccess(BuildContext context, String text, {required VoidCallback onPr
               children: [
                 Row(
                   children: const[
-                    TextCustom(text: 'Frave ', color: ColorsFrave.primary, fontWeight: FontWeight.w500 ),
+                    TextCustom(text: 'Blue Cortex ', color: ColorsFrave.primary, fontWeight: FontWeight.w500 ),
                     TextCustom(text: 'Social', fontWeight: FontWeight.w500),
                   ],
                 ),
@@ -58,7 +58,7 @@ void modalSuccess(BuildContext context, String text, {required VoidCallback onPr
                       color: ColorsFrave.primary,
                       borderRadius: BorderRadius.circular(5.0)
                     ),
-                    child: const TextCustom(text: 'Hecho', color: Colors.white, fontSize: 17 ),
+                    child: const TextCustom(text: 'Made', color: Colors.white, fontSize: 17 ),
                   ),
                 )
               ],

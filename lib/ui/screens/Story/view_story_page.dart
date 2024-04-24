@@ -168,7 +168,7 @@ class _ViewStoryPageState extends State<ViewStoryPage> with TickerProviderStateM
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   TextCustom(text: widget.storyHome.username, color: Colors.white ),
-                                  const TextCustom(text: 'Hace 5 horas', color: Colors.white70, fontSize: 14)
+                                  const TextCustom(text: '5 hours ago', color: Colors.white70, fontSize: 14)
                                 ],
                               ),
                             ),
@@ -193,7 +193,7 @@ class _ViewStoryPageState extends State<ViewStoryPage> with TickerProviderStateM
                                       decoration: InputDecoration(
                                         contentPadding: const EdgeInsets.only(left: 20.0),
 
-                                        hintText: 'Escribe un comentario',
+                                        hintText: 'Write a comment',
                                         hintStyle: GoogleFonts.roboto(color: Colors.white)
                                       ),
                                     ),

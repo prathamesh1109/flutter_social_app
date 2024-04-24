@@ -28,7 +28,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
     return BlocListener<UserBloc, UserState>(
       listener: (context, state) {
         if( state is LoadingUserState ){
-          modalLoading(context, 'Cargando...');
+          modalLoading(context, 'Charging...');
         }else if( state is FailureUserState ){
           Navigator.pop(context);
           errorMessageSnack(context, state.error);
@@ -41,7 +41,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: const TextCustom(text: 'Actividad', fontWeight: FontWeight.w500, letterSpacing: .9, fontSize: 19 ),
+          title: const TextCustom(text: 'Activity', fontWeight: FontWeight.w500, letterSpacing: .9, fontSize: 19 ),
           elevation: 0,
           leading: IconButton(
             splashRadius: 20,
@@ -96,15 +96,15 @@ class _NotificationsPageState extends State<NotificationsPage> {
                                   ),
                                   const SizedBox(width: 5.0),
                                   if( snapshot.data![i].typeNotification == '1' )
-                                    const TextCustom(text: 'Te envio solicitud ', fontSize: 16),
+                                    const TextCustom(text: 'I send you request', fontSize: 16),
                                   if( snapshot.data![i].typeNotification == '3' )
-                                    const TextCustom(text: 'Comenzo a seguirte', fontSize: 16),
+                                    const TextCustom(text: 'I start following you', fontSize: 16),
                                   if( snapshot.data![i].typeNotification == '2' )
                                     Row(
                                       children: const [
-                                        TextCustom(text:'Le dio ', fontSize: 16),
-                                        TextCustom(text:'Me Gusta ', fontSize: 16, fontWeight: FontWeight.w500 ),
-                                        TextCustom(text:'a tu foto', fontSize: 16),
+                                        TextCustom(text:'God ', fontSize: 16),
+                                        TextCustom(text:'I like ', fontSize: 16, fontWeight: FontWeight.w500 ),
+                                        TextCustom(text:'to your photo ', fontSize: 16),
                                       ],
                                     ),
                                 ],
@@ -127,7 +127,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                                 },
                                 child: const Padding(
                                   padding:  EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                                  child: TextCustom(text: 'Aceptar', fontSize: 16, color: Colors.white),
+                                  child: TextCustom(text: 'Accept', fontSize: 16, color: Colors.white),
                                 )
                               ),
                             ),

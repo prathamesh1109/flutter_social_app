@@ -53,13 +53,13 @@ class _AddStoryPageState extends State<AddStoryPage> {
     return BlocListener<StoryBloc, StoryState>(
       listener: (context, state) {
         if( state is LoadingStory ){
-          modalLoading(context, 'Cargando...');
+          modalLoading(context, 'Charging...');
         }else if( state is FailureStory ){
            Navigator.pop(context);
            errorMessageSnack(context, state.error);
         }else if( state is SuccessStory ){
           Navigator.pop(context);
-          modalSuccess(context, 'Historia agregada!', 
+          modalSuccess(context, 'Added history!',
             onPressed: () =>  Navigator.pushAndRemoveUntil(context, routeSlide(page: const HomePage()), (_) => false),
           );
         }
@@ -69,7 +69,7 @@ class _AddStoryPageState extends State<AddStoryPage> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
-          title:  const TextCustom(text: 'Galeria', fontSize: 19, letterSpacing: .8,),
+          title:  const TextCustom(text: 'Gallery', fontSize: 19, letterSpacing: .8,),
           leading: IconButton(
             splashRadius: 20,
             onPressed: () => Navigator.pop(context),
@@ -83,7 +83,7 @@ class _AddStoryPageState extends State<AddStoryPage> {
                     storyBloc.add( OnAddNewStoryEvent(state.image!.path) );
                   }
                 },
-                child: const TextCustom(text: 'Hecho', fontSize: 17, color: ColorsFrave.primary)
+                child: const TextCustom(text: 'Made', fontSize: 17, color: ColorsFrave.primary)
               ),
             )
           ],

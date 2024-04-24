@@ -52,7 +52,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
               children: [
                 
                 const TextCustom(
-                    text: 'Recupera tu cuenta!', 
+                    text: 'Recover your account!',
                     letterSpacing: 1.5, 
                     fontWeight: FontWeight.w500, 
                     fontSize: 25, 
@@ -61,7 +61,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           
                 const SizedBox(height: 10.0),
                 const TextCustom(
-                    text: 'Introduce tu correo electronico para recuperar tu cuenta.', 
+                    text: 'Enter your email to recover your account.',
                     fontSize: 17,
                     letterSpacing: 1.0,
                     maxLines: 2,
@@ -76,13 +76,13 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 const SizedBox(height: 10.0),
                 TextFieldFrave(
                   controller: emailController,
-                  hintText: 'Correo electronico',
+                  hintText: 'Email',
                   keyboardType: TextInputType.emailAddress,
                 ),
           
                 const SizedBox(height: 40.0),
                 BtnFrave(
-                  text: 'Buscar cuenta', 
+                  text: 'Find account',
                   width: size.width,
                   onPressed: (){},
                 ),

@@ -36,7 +36,7 @@ void modalSelectPicture({ required BuildContext context, required String title, 
                     children: const [
                       Icon(Icons.wallpaper_rounded, color: Colors.black87),
                       SizedBox(width: 10.0),
-                      TextCustom(text: 'Seleccionar de galeria', fontSize: 17),
+                      TextCustom(text: 'Select from gallery', fontSize: 17),
                     ],
                   ))
               ),
@@ -55,7 +55,7 @@ void modalSelectPicture({ required BuildContext context, required String title, 
                     children: const [
                       Icon(Icons.photo_camera_outlined, color: Colors.black87),
                       SizedBox(width: 10.0),
-                      TextCustom(text: 'Tomar una foto', fontSize: 17),
+                      TextCustom(text: 'Take a photo', fontSize: 17),
                     ],
                   ))
               ),

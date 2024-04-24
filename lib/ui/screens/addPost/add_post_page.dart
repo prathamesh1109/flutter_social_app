@@ -74,13 +74,13 @@ class _AddPostPageState extends State<AddPostPage> {
     return BlocListener<PostBloc, PostState>(
       listener: (context, state) {
         if( state is LoadingPost ){
-          modalLoading(context, 'Creando post...');
+          modalLoading(context, 'Creating posts...');
         }else if( state is FailurePost ){
           Navigator.pop(context);
           errorMessageSnack(context, state.error);
         }else if( state is SuccessPost ){
           Navigator.pop(context);
-          modalSuccess(context, 'Post creado!', 
+          modalSuccess(context, 'Post created!',
             onPressed: () => Navigator.pushAndRemoveUntil(context, routeSlide(page: const HomePage()), (_) => false) 
           );
         }
@@ -128,10 +128,10 @@ class _AddPostPageState extends State<AddPostPage> {
                                   decoration: InputDecoration(
                                     contentPadding: const EdgeInsets.only(left: 10.0, top: 10.0),
                                     border: InputBorder.none,
-                                    hintText: 'Agrega un comentario',
+                                    hintText: 'Add a comment',
                                     hintStyle: GoogleFonts.roboto(fontSize: 18)
                                   ),
-                                  validator: RequiredValidator(errorText: 'El campo es obligatorio'),
+                                  validator: RequiredValidator(errorText: 'The field is required'),
                                 ),
                               ),
                             ],
@@ -244,9 +244,9 @@ class _AddPostPageState extends State<AddPostPage> {
                           const SizedBox(width: 5.0),
                           BlocBuilder<PostBloc, PostState>(
                             builder: (_, state){
-                              if(state.privacyPost == 1) return const TextCustom(text: 'Todos pueden comentar', fontSize: 16);
-                              if(state.privacyPost == 2) return const TextCustom(text: 'Solo seguidores', fontSize: 16);
-                              if(state.privacyPost == 3) return const TextCustom(text: 'Nadie', fontSize: 16);
+                              if(state.privacyPost == 1) return const TextCustom(text: 'Everyone can comment', fontSize: 16);
+                              if(state.privacyPost == 2) return const TextCustom(text: 'Only followers', fontSize: 16);
+                              if(state.privacyPost == 3) return const TextCustom(text: 'Nobody', fontSize: 16);
                               return const SizedBox();
                             }
                           ),
@@ -333,13 +333,13 @@ class _AddPostPageState extends State<AddPostPage> {
                 if(state.imageFileSelected != null){
                   postBloc.add( OnAddNewPostEvent(_descriptionController.text.trim()) );
                 } else {
-                  modalWarning(context, 'No hay imagenes seleccionadas!');
+                  modalWarning(context, 'There are no images selected!');
                 }
               }
               
             },
             child: const TextCustom(
-              text: 'Publicar', 
+              text: 'Post',
               color: Colors.white, 
               fontSize: 16, 
               fontWeight: FontWeight.w500,

@@ -28,7 +28,7 @@ class _ProfileAnotherUserPageState extends State<ProfileAnotherUserPage> {
     return BlocListener<UserBloc, UserState>(
       listener: (context, state) {
         if( state is LoadingFollowingUser ){
-          modalLoading(context, 'Cargando...');
+          modalLoading(context, 'Charging...');
         }else if( state is FailureUserState ){
           Navigator.pop(context);
           errorMessageSnack(context, state.error);
@@ -159,8 +159,8 @@ class _ListFotosAnotherProfile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              TextCustom(text: 'Esta cuenta es privada', fontWeight: FontWeight.w500),
-              TextCustom(text: 'Sigue esta cuenta para poder ver sus fotos.', color: Colors.grey, fontSize: 16),
+              TextCustom(text: 'This account is private', fontWeight: FontWeight.w500),
+              TextCustom(text: 'Follow this account to see their photos.', color: Colors.grey, fontSize: 16),
             ],
           )
         ],
@@ -211,7 +211,7 @@ class _BtnFollowAndMessage extends StatelessWidget {
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0) )
               ),
               child: TextCustom(
-                text: isFriend == 1 ? 'Siguiendo' : 'Seguir', 
+                text: isFriend == 1 ? 'Following' : 'Follow',
                 fontSize: 20, 
                 color: isFriend == 1 ? Colors.black : Colors.white
               ),
@@ -227,7 +227,7 @@ class _BtnFollowAndMessage extends StatelessWidget {
               style: TextButton.styleFrom(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0) )
               ),
-              child: const TextCustom(text: 'Pendiente', fontSize: 20, color: Colors.black),
+              child: const TextCustom(text: 'Earring', fontSize: 20, color: Colors.black),
               onPressed: (){
                 
               }, 
@@ -244,7 +244,7 @@ class _BtnFollowAndMessage extends StatelessWidget {
             style: TextButton.styleFrom(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0) )
             ),
-            child: const TextCustom(text: 'Mensaje', fontSize: 20),
+            child: const TextCustom(text: 'Message', fontSize: 20),
             onPressed: () 
               => Navigator.push(
                   context, 
@@ -284,13 +284,13 @@ class _PostAndFollowingAndFollowers extends StatelessWidget {
                 Column(
                   children: [
                     TextCustom(text: analytics.friends.toString(),  fontSize: 22, fontWeight: FontWeight.w500),
-                    const TextCustom(text: 'Siguiendo', fontSize: 17, color: Colors.grey),
+                    const TextCustom(text: 'Following', fontSize: 17, color: Colors.grey),
                   ],
                 ),
                 Column(
                   children: [
                     TextCustom(text: analytics.followers.toString(),  fontSize: 22, fontWeight: FontWeight.w500),
-                    const TextCustom(text: 'Seguidores', fontSize: 17, color: Colors.grey),
+                    const TextCustom(text: 'Followers', fontSize: 17, color: Colors.grey),
                   ],
                 ),
                 

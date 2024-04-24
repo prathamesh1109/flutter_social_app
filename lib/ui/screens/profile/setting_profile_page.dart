@@ -27,7 +27,7 @@ class SettingProfilePage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const TextCustom(text: 'Configuración', fontSize: 19, fontWeight: FontWeight.w500),
+        title: const TextCustom(text: 'Setting', fontSize: 19, fontWeight: FontWeight.w500),
         elevation: 0,
         leading: IconButton(
           onPressed: () => Navigator.pop(context), 
@@ -49,7 +49,7 @@ class SettingProfilePage extends StatelessWidget {
               child: TextFormField(
                 decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintText: 'Buscar',
+                  hintText: 'Look for',
                   hintStyle: GoogleFonts.getFont('Roboto', color: Colors.grey[400]),
                   prefixIcon: const Icon(Icons.search)
                 ),
@@ -58,27 +58,27 @@ class SettingProfilePage extends StatelessWidget {
 
             const SizedBox(height: 15.0),
             ItemProfile(
-              text: 'Seguir y invitar a un amigo', 
+              text: 'Follow and invite a friend',
               icon: Icons.person_add_alt,
               onPressed: (){}
             ),
             ItemProfile(
-              text: 'Notificaciones', 
+              text: 'Notifications',
               icon: Icons.notifications_none_rounded,
               onPressed: (){}
             ),
             ItemProfile(
-              text: 'Privacidad', 
+              text: 'Privacy',
               icon: Icons.lock_outline_rounded,
               onPressed: () => Navigator.push(context, routeSlide(page: const PrivacyProgilePage()))
             ),
             ItemProfile(
-              text: 'Seguridad', 
+              text: 'Security',
               icon: Icons.security_outlined,
               onPressed: () => Navigator.push(context, routeSlide(page: const ChangePasswordPage()))
             ),
             ItemProfile(
-              text: 'Cuenta', 
+              text: 'Account',
               icon: Icons.account_circle_outlined,
               onPressed: () => Navigator.push(context, routeSlide(page: const AccountProfilePage()))
             ),
@@ -88,12 +88,12 @@ class SettingProfilePage extends StatelessWidget {
               onPressed: (){}
             ),
             ItemProfile(
-              text: 'Acerda de', 
+              text: 'About',
               icon: Icons.info_outline_rounded,
               onPressed: (){}
             ),
             ItemProfile(
-              text: 'Temas', 
+              text: 'Themes',
               icon: Icons.palette_outlined,
               onPressed: () => Navigator.push(context, routeSlide(page: const ThemeProfilePage()))
             ),
@@ -103,21 +103,21 @@ class SettingProfilePage extends StatelessWidget {
               children: const [
                 Icon(Icons.copyright_outlined),
                 SizedBox(width: 5.0),
-                TextCustom(text: 'FRAVE DEVELOPER', fontSize: 17, fontWeight: FontWeight.w500),
+                TextCustom(text: 'BlueCortex DEVELOPER', fontSize: 17, fontWeight: FontWeight.w500),
               ],
             ),
             const SizedBox(height: 30.0),
-            const TextCustom(text: 'Sesiones', fontSize: 17, fontWeight: FontWeight.w500),
+            const TextCustom(text: 'Sessions', fontSize: 17, fontWeight: FontWeight.w500),
             
             const SizedBox(height: 10.0),
             ItemProfile(
-              text: 'Agregar o cambiar de cuenta', 
+              text: 'Add or change account',
               icon: Icons.add,
               colorText: ColorsFrave.primary,
               onPressed: () {}
             ),
             ItemProfile(
-              text: 'Cerrar cuenta ${userBloc.state.user!.username}', 
+              text: 'Close account ${userBloc.state.user!.username}',
               icon: Icons.logout_rounded,
               colorText: ColorsFrave.primary,
               onPressed: () {

@@ -1,8 +1,8 @@
 
 class Environment {
 
-  static const String baseUrl = 'http://192.168.240.81:7070/';
+  static const String baseUrl = 'http://localhost:3000/';
   
-  static const String urlApi = 'http://192.168.240.81:7070/api';
+  static const String urlApi = 'http://localhost:3000/api';
 
 }

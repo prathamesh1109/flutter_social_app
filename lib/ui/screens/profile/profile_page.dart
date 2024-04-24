@@ -30,11 +30,11 @@ class ProfilePage extends StatelessWidget {
     return BlocListener<UserBloc, UserState>(
       listener: (context, state) {
         if( state is LoadingUserState ){
-          modalLoading(context, 'Actualizando imagen...');
+          modalLoading(context, 'Updating image...');
         } 
         if ( state is SuccessUserState ){
           Navigator.pop(context);
-          modalSuccess(context, 'Imagen actualizada', onPressed: () => Navigator.pop(context));
+          modalSuccess(context, 'Updated image', onPressed: () => Navigator.pop(context));
         }
         if ( state is FailureUserState ){
           Navigator.pop(context);
@@ -59,7 +59,7 @@ class ProfilePage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: BlocBuilder<UserBloc, UserState>(
                 builder: (_, state) => AnimatedToggle(
-                  values: const ['Fotos', 'Guardados'], 
+                  values: const ['Photos', 'Saved'],
                   onToggleCalbBack: (value) {
                     userBloc.add( OnToggleButtonProfile(!state.isPhotos) );
                   },
@@ -233,7 +233,7 @@ class _PostAndFollowingAndFollowers extends StatelessWidget {
                           ? TextCustom(text: state.postsUser!.friends.toString(),  fontSize: 22, fontWeight: FontWeight.w500)
                           : const TextCustom(text: '')
                       ),
-                      const TextCustom(text: 'Siguiendo', fontSize: 17, color: Colors.grey,  letterSpacing: .7),
+                      const TextCustom(text: 'Following', fontSize: 17, color: Colors.grey,  letterSpacing: .7),
                     ],
                   ),
                 ),
@@ -247,7 +247,7 @@ class _PostAndFollowingAndFollowers extends StatelessWidget {
                           ? TextCustom(text: state.postsUser!.followers.toString(),  fontSize: 22, fontWeight: FontWeight.w500)
                           : const TextCustom(text: '0')
                       ),
-                      const TextCustom(text: 'Seguidores', fontSize: 17, color: Colors.grey, letterSpacing: .7),
+                      const TextCustom(text: 'Followers', fontSize: 17, color: Colors.grey, letterSpacing: .7),
                     ],
                   ),
                 ),
@@ -273,7 +273,7 @@ class _UsernameAndDescription extends StatelessWidget {
           child: BlocBuilder<UserBloc, UserState>(
             builder: (_, state) 
               => ( state.user?.username != null)
-              ? TextCustom(text: state.user!.username != '' ? state.user!.username : 'Usuario' , fontSize: 22, fontWeight: FontWeight.w500 )
+              ? TextCustom(text: state.user!.username != '' ? state.user!.username : 'User' , fontSize: 22, fontWeight: FontWeight.w500 )
               : const CircularProgressIndicator() 
           )
         ),
@@ -283,7 +283,7 @@ class _UsernameAndDescription extends StatelessWidget {
             builder: (_, state) 
               => ( state.user?.description != null) 
               ? TextCustom(
-                  text: (state.user?.description != '' ? state.user!.description : 'Descripción'), fontSize: 17, color: Colors.grey
+                  text: (state.user?.description != '' ? state.user!.description : 'Description'), fontSize: 17, color: Colors.grey
                 )
               : const CircularProgressIndicator()
           ),
@@ -362,7 +362,7 @@ class _CoverAndProfile extends StatelessWidget {
                         splashColor: Colors.transparent,
                         onTap: () => modalSelectPicture(
                           context: context,
-                          title: 'Actualizar image de perfil',
+                          title: 'Update profile image',
                           onPressedImage: () async {
 
                             Navigator.pop(context);
@@ -398,7 +398,7 @@ class _CoverAndProfile extends StatelessWidget {
               splashRadius: 20,
               onPressed: () => modalSelectPicture(
                 context: context,
-                title: 'Actualizar imagen de portada',
+                title: 'Update cover image',
                 onPressedImage: () async {
       
                   Navigator.pop(context);

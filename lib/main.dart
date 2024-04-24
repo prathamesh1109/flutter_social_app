@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Social Media - Fraved',
+        title: 'Social Media - BlueCortex',
         home: CheckingLoginPage(),
       ),
     );

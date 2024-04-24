@@ -92,7 +92,7 @@ class _CheckingLoginPageState extends State<CheckingLoginPage> with TickerProvid
                     )
                   ),
                   const SizedBox(height: 10.0),
-                  const TextCustom(text: 'Verificando...', color: Colors.white)
+                  const TextCustom(text: 'Checking...', color: Colors.white)
                 ],
               ),
             ),

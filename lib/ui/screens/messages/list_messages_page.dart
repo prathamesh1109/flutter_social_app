@@ -27,7 +27,7 @@ class _ListMessagesPageState extends State<ListMessagesPage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const TextCustom(text: 'Mensajes', fontSize: 20, fontWeight: FontWeight.w500, letterSpacing: .8),
+        title: const TextCustom(text: 'Messages', fontSize: 20, fontWeight: FontWeight.w500, letterSpacing: .8),
         centerTitle: true,
         elevation: 0,
         leading: IconButton(
@@ -60,7 +60,7 @@ class _ListMessagesPageState extends State<ListMessagesPage> {
                     child: TextField(
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.only(left: 10.0),
-                        hintText: 'Buscar a un amigo',
+                        hintText: 'Find a friend',
                         hintStyle: GoogleFonts.roboto(letterSpacing: .8, fontSize: 17),
                         border: InputBorder.none,
                       ),

@@ -43,8 +43,8 @@ modalPrivacyProfile(BuildContext context) {
                 buildWhen: (previous, current) => previous != current,
                 builder: (_, state) 
                   => TextCustom(text: ( state.user != null && state.user!.isPrivate == 0)
-                    ? 'Cambiar cuenta a Privada'
-                    : 'Cambiar cuenta a Publica', 
+                    ? 'Change account to Private'
+                    : 'Change account to Public',
                     fontWeight: FontWeight.w500
                   )
               )
@@ -56,7 +56,7 @@ modalPrivacyProfile(BuildContext context) {
               children: const [
                 Icon(Icons.photo_outlined, size: 30, color: Colors.black),
                 SizedBox(width: 10.0),
-                TextCustom(text: 'Todo el mundo podra ver tus fotos y videos', fontSize: 15, color: Colors.grey )
+                TextCustom(text: 'Everyone will be able to see your photos and videos', fontSize: 15, color: Colors.grey )
               ],
             ),
             const SizedBox(height: 10.0),
@@ -65,7 +65,7 @@ modalPrivacyProfile(BuildContext context) {
                 Icon(Icons.chat_bubble_outline_rounded, size: 30, color: Colors.black),
                 SizedBox(width: 10.0),
                 TextCustom(
-                  text: 'Esto no cambiara quien te puede etiquetar \n@mencion', 
+                  text: 'This will not change who can tag you \n @mention',
                   fontSize: 15, 
                   color: Colors.grey,
                   maxLines: 2,
@@ -78,7 +78,7 @@ modalPrivacyProfile(BuildContext context) {
                 Icon(Icons.person_add_alt, size: 30, color: Colors.black),
                 SizedBox(width: 10.0),
                 TextCustom(
-                  text: 'Todas las solicitudes pendientes deben \n ser aprovadas a menos que las elimines', 
+                  text: 'All pending requests must be approved unless you delete them',
                   fontSize: 15, 
                   color: Colors.grey,
                   maxLines: 2,
@@ -93,7 +93,7 @@ modalPrivacyProfile(BuildContext context) {
             BlocBuilder<UserBloc, UserState>(
               buildWhen: (previous, current) => previous != current,
               builder: (_, state) => BtnFrave(
-                text: ( state.user != null && state.user!.isPrivate == 0) ? 'Cambiar a Privada' : 'Cambiar a Publica', 
+                text: ( state.user != null && state.user!.isPrivate == 0) ? 'Switch to Private' : 'Switch to Public',
                 width: size.width,
                 fontSize: 17,
                 backgroundColor: ColorsFrave.primary,

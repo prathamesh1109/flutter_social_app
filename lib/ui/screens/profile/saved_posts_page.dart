@@ -22,7 +22,7 @@ class SavedPostsPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const TextCustom(text: 'Todos los posts', fontWeight: FontWeight.w500),
+        title: const TextCustom(text: 'All posts', fontWeight: FontWeight.w500),
         elevation: 0,
         leading: IconButton(
           onPressed: () => Navigator.pop(context),

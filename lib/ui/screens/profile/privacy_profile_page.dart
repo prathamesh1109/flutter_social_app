@@ -18,13 +18,13 @@ class PrivacyProgilePage extends StatelessWidget {
       listener: (context, state) {
 
         if( state is LoadingChangeAccount ){
-          modalLoading(context, 'Cambiando privacidad...');
+          modalLoading(context, 'Changing privacy...');
         }else if( state is FailureUserState ){
           Navigator.pop(context);
           errorMessageSnack(context, state.error);
         }else if ( state is SuccessUserState ){
           Navigator.pop(context);
-          modalSuccess(context, 'Privacidad cambiada', onPressed: () => Navigator.pop(context));
+          modalSuccess(context, 'Privacy changed', onPressed: () => Navigator.pop(context));
         }
 
       },
@@ -32,7 +32,7 @@ class PrivacyProgilePage extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: const TextCustom(text: 'Privacidad', fontSize: 19, fontWeight: FontWeight.w500 ),
+          title: const TextCustom(text: 'Privacy', fontSize: 19, fontWeight: FontWeight.w500 ),
           elevation: 0,
           leading: IconButton(
             onPressed: () => Navigator.pop(context), 
@@ -45,7 +45,7 @@ class PrivacyProgilePage extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             children: [
               
-              const TextCustom(text: 'Privacidad de la cuenta', fontSize: 16, fontWeight: FontWeight.w500),
+              const TextCustom(text: 'Account Privacy', fontSize: 16, fontWeight: FontWeight.w500),
               const SizedBox(height: 10.0),
               SizedBox(
                 height: 50,
@@ -57,7 +57,7 @@ class PrivacyProgilePage extends StatelessWidget {
                       children: [
                         const Icon(Icons.lock_outlined),
                         const SizedBox(width: 10),
-                        const TextCustom(text: 'Cuenta privada', fontSize: 17 ),
+                        const TextCustom(text: 'Private account', fontSize: 17 ),
                         const Spacer(),
                         ( state.user != null && state.user!.isPrivate == 1)
                           ? const Icon(Icons.radio_button_checked_rounded, color: ColorsFrave.primary)
@@ -72,10 +72,10 @@ class PrivacyProgilePage extends StatelessWidget {
     
               const Divider(),
               const SizedBox(height: 10.0),
-              const TextCustom(text: 'Interaciones', fontSize: 16, fontWeight: FontWeight.w500),
+              const TextCustom(text: 'Interactions', fontSize: 16, fontWeight: FontWeight.w500),
               const SizedBox(height: 10.0),
               ItemProfile(
-                text: 'Comentarios', 
+                text: 'Comments',
                 icon: Icons.chat_bubble_outline_rounded, 
                 onPressed: (){}
               ),
@@ -85,17 +85,17 @@ class PrivacyProgilePage extends StatelessWidget {
                 onPressed: (){}
               ),
               ItemProfile(
-                text: 'Menciones', 
+                text: 'Mentions',
                 icon: Icons.alternate_email_sharp, 
                 onPressed: (){}
               ),
               ItemProfile(
-                text: 'Historias', 
+                text: 'stories',
                 icon: Icons.control_point_duplicate_rounded, 
                 onPressed: (){}
               ),
               ItemProfile(
-                text: 'Mensajes', 
+                text: 'Messages',
                 icon: Icons.send_rounded, 
                 onPressed: (){}
               ),
@@ -103,26 +103,26 @@ class PrivacyProgilePage extends StatelessWidget {
               const Divider(),
               const SizedBox(height: 10.0),
     
-              const TextCustom(text: 'Conecciones', fontSize: 16, fontWeight: FontWeight.w500),
+              const TextCustom(text: 'Connections', fontSize: 16, fontWeight: FontWeight.w500),
               const SizedBox(height: 10.0),
     
               ItemProfile(
-                text: 'Restringir cuentas', 
+                text: 'Restrict accounts',
                 icon: Icons.no_accounts_outlined, 
                 onPressed: (){}
               ),
               ItemProfile(
-                text: 'Bloquear cuentas', 
+                text: 'Block accounts',
                 icon: Icons.highlight_off_rounded, 
                 onPressed: (){}
               ),
               ItemProfile(
-                text: 'Silenciar cuentas', 
+                text: 'Mute accounts',
                 icon: Icons.notifications_off_outlined, 
                 onPressed: (){}
               ),
               ItemProfile(
-                text: 'Cuentas que sigues', 
+                text: 'Accounts you follow',
                 icon: Icons.people_alt_outlined, 
                 onPressed: (){}
               ),

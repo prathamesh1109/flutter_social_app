@@ -41,7 +41,7 @@ void modalOptionsAnotherUser(BuildContext context ) {
                     children: const [
                       Icon(Icons.report_gmailerrorred_rounded, color: Colors.red),
                       SizedBox(width: 10.0),
-                      TextCustom(text: 'Reportar', fontSize: 17, color: Colors.red),
+                      TextCustom(text: 'Report', fontSize: 17, color: Colors.red),
                     ],
                   ))
               ),
@@ -60,7 +60,7 @@ void modalOptionsAnotherUser(BuildContext context ) {
                     children: const [
                       Icon(Icons.block_outlined, color: Colors.black87),
                       SizedBox(width: 10.0),
-                      TextCustom(text: 'Bloquear', fontSize: 17),
+                      TextCustom(text: 'Block', fontSize: 17),
                     ],
                   ))
               ),
@@ -79,7 +79,7 @@ void modalOptionsAnotherUser(BuildContext context ) {
                     children: const [
                       Icon(Icons.copy_all_rounded, color: Colors.black87),
                       SizedBox(width: 10.0),
-                      TextCustom(text: 'Copiar URL del perfil', fontSize: 17),
+                      TextCustom(text: 'Copy profile URL', fontSize: 17),
                     ],
                   ))
               ),
@@ -98,7 +98,7 @@ void modalOptionsAnotherUser(BuildContext context ) {
                     children: const [
                       Icon(Icons.share_outlined, color: Colors.black87),
                       SizedBox(width: 10.0),
-                      TextCustom(text: 'Compartir este perfil', fontSize: 17),
+                      TextCustom(text: 'Share this profile', fontSize: 17),
                     ],
                   ))
               ),

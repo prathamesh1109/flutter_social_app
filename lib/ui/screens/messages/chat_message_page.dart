@@ -196,7 +196,7 @@ class _ChatMessagesPageState extends State<ChatMessagesPage> with TickerProvider
                 },
                 decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintText: 'Escribe un mensaje',
+                  hintText: 'Write a message',
                   hintStyle: GoogleFonts.roboto(fontSize: 17)
                 ),
               ),
@@ -207,7 +207,7 @@ class _ChatMessagesPageState extends State<ChatMessagesPage> with TickerProvider
               onPressed: state.isWritting
               ? () => _handleSubmit(_messageController.text.trim())
               : null, 
-              child: const TextCustom(text: 'Enviar', color: ColorsFrave.primary)
+              child: const TextCustom(text: 'To send', color: ColorsFrave.primary)
             ),
           )
         ],

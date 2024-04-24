@@ -99,7 +99,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           
                     const SizedBox(height: 10.0),
                     const TextCustom(
-                       text: 'Create una nueva cuenta.', 
+                       text: 'Create a new account.',
                        fontSize: 17,
                        letterSpacing: 1.0,
                     ),
@@ -107,21 +107,21 @@ class _RegisterPageState extends State<RegisterPage> {
                     const SizedBox(height: 40.0),
                     TextFieldFrave(
                       controller: fullNameController,
-                      hintText: 'Nombre completo',
-                      validator: RequiredValidator(errorText: 'El nombre es requerido'),
+                      hintText: 'Full name',
+                      validator: RequiredValidator(errorText: 'The name is required'),
                     ),
                   
                     const SizedBox(height: 40.0),
                     TextFieldFrave(
                       controller: userController,
-                      hintText: 'Usuario',
-                      validator: RequiredValidator(errorText: 'El usuario es requerido'),
+                      hintText: 'User',
+                      validator: RequiredValidator(errorText: 'The user is required'),
                     ),
                     
                     const SizedBox(height: 40.0),
                     TextFieldFrave(
                       controller: emailController,
-                      hintText: 'Correo electronico',
+                      hintText: 'Email',
                       keyboardType: TextInputType.emailAddress,
                       validator: validatedEmail,
                     ),
@@ -129,21 +129,21 @@ class _RegisterPageState extends State<RegisterPage> {
                     const SizedBox(height: 40.0),
                     TextFieldFrave(
                       controller: passwordController,
-                      hintText: 'Contraseña',
+                      hintText: 'Password',
                       isPassword: true,
                       validator: passwordValidator,
                     ),
                   
                     const SizedBox(height: 60.0),
                     const TextCustom(
-                       text: 'Al registrarte, aceptas los terminos de servicio y las politicas de privacidad.', 
+                       text: 'By registering, you accept the terms of service and privacy policies.',
                        fontSize: 15,
                        maxLines: 2,
                     ),
                           
                     const SizedBox(height: 20.0),
                     BtnFrave(
-                      text: 'Registrame', 
+                      text: 'Register Me',
                       width: size.width,
                       onPressed: (){
                         if( _keyForm.currentState!.validate() ){

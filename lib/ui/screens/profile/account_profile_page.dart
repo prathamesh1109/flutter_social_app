@@ -60,7 +60,7 @@ class _AccountProfilePageState extends State<AccountProfilePage> {
         
         if( state is LoadingEditUserState ){
 
-          modalLoading(context, 'Actualizando datos...');
+          modalLoading(context, 'Updating data...');
 
         }
         if ( state is FailureUserState ){
@@ -72,7 +72,7 @@ class _AccountProfilePageState extends State<AccountProfilePage> {
         if( state is SuccessUserState ){
 
           Navigator.pop(context);
-          modalSuccess(context, 'Actualizado!', onPressed: () => Navigator.pop(context));
+          modalSuccess(context, 'Updated!', onPressed: () => Navigator.pop(context));
 
         }
       },
@@ -80,7 +80,7 @@ class _AccountProfilePageState extends State<AccountProfilePage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: const TextCustom(text: 'Actualizar perfil', fontSize: 19),
+          title: const TextCustom(text: 'Update profile', fontSize: 19),
           elevation: 0,
           leading: IconButton(
             highlightColor: Colors.transparent,
@@ -99,7 +99,7 @@ class _AccountProfilePageState extends State<AccountProfilePage> {
                   ));
                 }
               }, 
-              child: const TextCustom(text: 'Guardar', color: ColorsFrave.primary, fontSize: 14)
+              child: const TextCustom(text: 'Keep', color: ColorsFrave.primary, fontSize: 14)
             )
           ],
         ),
@@ -113,24 +113,24 @@ class _AccountProfilePageState extends State<AccountProfilePage> {
                 const SizedBox(height: 20.0),
                 TextFormProfile(
                   controller: _userController,
-                  labelText: 'Usuario',
+                  labelText: 'User',
                   validator: MultiValidator([
-                    RequiredValidator(errorText: 'Usuario es requerido'),
-                    MinLengthValidator(3, errorText: 'Minimo 3 caracteres')
+                    RequiredValidator(errorText: 'User is required'),
+                    MinLengthValidator(3, errorText: 'Minimum 3 characters')
                   ])
                 ),
           
                 const SizedBox(height: 10.0),
                 TextFormProfile(
                   controller: _descriptionController,
-                  labelText: 'Descripciòn',
+                  labelText: 'Description',
                   maxLines: 3
                 ),
                 const SizedBox(height: 20.0),
                 TextFormProfile(
                   controller: _emailController,
                   isReadOnly: true,
-                  labelText: 'Correo Electronico',
+                  labelText: 'Email',
                 ),
           
                 const SizedBox(height: 20.0),
@@ -138,15 +138,15 @@ class _AccountProfilePageState extends State<AccountProfilePage> {
                   controller: _fullNameController,
                   labelText: 'Fullname',
                   validator: MultiValidator([
-                    RequiredValidator(errorText: 'Nombre es requerido'),
-                    MinLengthValidator(3, errorText: 'Minimo 3 caracteres')
+                    RequiredValidator(errorText: 'Name is required'),
+                    MinLengthValidator(3, errorText: 'Minimum 3 characters')
                   ])
                 ),
           
                 const SizedBox(height: 20.0),
                 TextFormProfile(
                   controller: _phoneController,
-                  labelText: 'Telefono',
+                  labelText: 'Telephone',
                   keyboardType: TextInputType.number,
                 ),
           

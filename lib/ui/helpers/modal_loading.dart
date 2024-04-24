@@ -18,7 +18,7 @@ void modalLoading(BuildContext context, String text){
             children: [
               Row(
                 children: const [
-                  TextCustom(text: 'Frave ', color: ColorsFrave.primary, fontWeight: FontWeight.w500 ),
+                  TextCustom(text: 'Blue Cortex ', color: ColorsFrave.primary, fontWeight: FontWeight.w500 ),
                   TextCustom(text: 'Food', fontWeight: FontWeight.w500),
                 ],
               ),

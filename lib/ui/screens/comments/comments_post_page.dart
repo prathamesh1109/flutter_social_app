@@ -64,7 +64,7 @@ class _CommentsPostPageState extends State<CommentsPostPage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: const TextCustom(text: 'Comentarios', fontSize: 20, fontWeight: FontWeight.w500, letterSpacing: .8),
+          title: const TextCustom(text: 'Comments', fontSize: 20, fontWeight: FontWeight.w500, letterSpacing: .8),
           centerTitle: true,
           elevation: 0,
           leading: IconButton(
@@ -161,7 +161,7 @@ class _CommentsPostPageState extends State<CommentsPostPage> {
                               decoration: InputDecoration(
                                 border: InputBorder.none,
                                 contentPadding: const EdgeInsets.only(left: 10.0),
-                                hintText: 'Escribe un comentario',
+                                hintText: 'Write a comment',
                                 hintStyle: GoogleFonts.roboto(color: Colors.white)
                               ),
                             ),
